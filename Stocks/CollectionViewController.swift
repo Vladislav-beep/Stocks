@@ -7,55 +7,84 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
 
-class CollectionViewController: UICollectionViewController {
+class CollectionViewController: ViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+    
+   // let itemsPerRow = CGFloat(itemsPerRowStepper.value)
+    let sectionInserts = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+    
+    let stocks = ["1", "2", "3"]
+    var itemsPerRow: CGFloat = 5
 
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var itemsPerRowStepper: UIStepper!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
-        // Do any additional setup after loading the view.
+        itemsPerRowStepper.maximumValue = 4
+        itemsPerRowStepper.minimumValue = 2
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func stepperPressed(_ sender: UIStepper) {
+        itemsPerRow = CGFloat(sender.value)
+        self.collectionView.reloadData()
+        self.collectionView.collectionViewLayout.invalidateLayout()
     }
-    */
-
+    
+    
+    
     // MARK: UICollectionViewDataSource
 
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        1
     }
 
 
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
-        return 0
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        15
     }
 
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "stockCell", for: indexPath)
     
-        // Configure the cell
+        cell.backgroundColor = .blue
     
         return cell
     }
+}
+    
+    extension CollectionViewController: UICollectionViewDelegateFlowLayout {
+        
+        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+            
+            
+            let paddingWidth = sectionInserts.left * (itemsPerRow + 1)
+            let availableWidth = collectionView.frame.width - paddingWidth
+            let widthPerItem = availableWidth / itemsPerRow
+            
+            
+            return CGSize(width: widthPerItem, height: widthPerItem)
+        }
+        
+        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+            sectionInserts
+        }
+        
+        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+            return sectionInserts.left
+        }
+
+        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+            return sectionInserts.left
+        }
+    }
+    
 
     // MARK: UICollectionViewDelegate
 
+    
+    
     /*
     // Uncomment this method to specify if the specified item should be highlighted during tracking
     override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
@@ -85,4 +114,4 @@ class CollectionViewController: UICollectionViewController {
     }
     */
 
-}
+
