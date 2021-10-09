@@ -14,7 +14,7 @@ class CollectionViewController: ViewController, UICollectionViewDelegate, UIColl
     let sectionInserts = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
     
     let stocks = ["1", "2", "3"]
-    var itemsPerRow: CGFloat = 5
+    var itemsPerRow: CGFloat = 2
 
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -28,8 +28,8 @@ class CollectionViewController: ViewController, UICollectionViewDelegate, UIColl
     
     @IBAction func stepperPressed(_ sender: UIStepper) {
         itemsPerRow = CGFloat(sender.value)
-        self.collectionView.reloadData()
-        self.collectionView.collectionViewLayout.invalidateLayout()
+        collectionView.reloadData()
+        collectionView.collectionViewLayout.invalidateLayout()
     }
     
     
