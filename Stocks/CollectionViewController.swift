@@ -8,10 +8,10 @@
 import UIKit
 
 
-class CollectionViewController: ViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class CollectionViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
    // let itemsPerRow = CGFloat(itemsPerRowStepper.value)
-    let sectionInserts = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+    let sectionInserts = UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 15)
     
     let stocks = ["1", "2", "3"]
     var itemsPerRow: CGFloat = 2

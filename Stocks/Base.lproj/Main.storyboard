@@ -33,30 +33,15 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="stockCell" id="Wfo-j0-QMb">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="stockCell" id="whT-Kg-avh">
                                         <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="f52-dF-fNF">
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="yF3-Ju-rMr">
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ifO-Hi-xdC">
-                                                    <rect key="frame" x="4" y="4" width="80" height="80"/>
-                                                    <color key="backgroundColor" red="0.56862745100000001" green="0.87450980389999999" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" secondItem="ifO-Hi-xdC" secondAttribute="height" multiplier="1:1" id="k4w-Y2-Bpm"/>
-                                                    </constraints>
-                                                </imageView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="ifO-Hi-xdC" firstAttribute="top" secondItem="f52-dF-fNF" secondAttribute="top" constant="4" id="CpZ-pl-bwe"/>
-                                                <constraint firstItem="ifO-Hi-xdC" firstAttribute="width" secondItem="f52-dF-fNF" secondAttribute="height" multiplier="5:8" id="DAy-dO-fl9"/>
-                                                <constraint firstItem="ifO-Hi-xdC" firstAttribute="leading" secondItem="f52-dF-fNF" secondAttribute="leading" constant="4" id="oGA-d8-BTj"/>
-                                            </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="128" height="128"/>
                                         <connections>
-                                            <segue destination="OSN-kJ-Ytc" kind="presentation" id="uPZ-Vp-G4F"/>
+                                            <segue destination="OSN-kJ-Ytc" kind="presentation" identifier="showDetail" id="2a3-Tj-e43"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

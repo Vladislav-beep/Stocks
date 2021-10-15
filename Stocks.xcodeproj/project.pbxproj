@@ -15,7 +15,6 @@
 		B944A78327118A7A000057BC /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B944A78227118A7A000057BC /* Model.swift */; };
 		B944A78627118AA8000057BC /* Network Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B944A78527118AA8000057BC /* Network Manager.swift */; };
 		B9E8129D2710A86B006BEEB9 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E8129C2710A86B006BEEB9 /* CollectionViewController.swift */; };
-		B9E812A02710A898006BEEB9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E8129F2710A898006BEEB9 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +28,6 @@
 		B944A78227118A7A000057BC /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		B944A78527118AA8000057BC /* Network Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Network Manager.swift"; sourceTree = "<group>"; };
 		B9E8129C2710A86B006BEEB9 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
-		B9E8129F2710A898006BEEB9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +65,6 @@
 				B91C42D92703655100F3E902 /* Main.storyboard */,
 				B944A78227118A7A000057BC /* Model.swift */,
 				B944A78527118AA8000057BC /* Network Manager.swift */,
-				B9E8129F2710A898006BEEB9 /* ViewController.swift */,
 				B9E8129C2710A86B006BEEB9 /* CollectionViewController.swift */,
 				B91C42DC2703655200F3E902 /* Assets.xcassets */,
 				B91C42DE2703655200F3E902 /* LaunchScreen.storyboard */,
@@ -149,7 +146,6 @@
 				B944A78327118A7A000057BC /* Model.swift in Sources */,
 				B9E8129D2710A86B006BEEB9 /* CollectionViewController.swift in Sources */,
 				B91C42D42703655100F3E902 /* AppDelegate.swift in Sources */,
-				B9E812A02710A898006BEEB9 /* ViewController.swift in Sources */,
 				B91C42D62703655100F3E902 /* SceneDelegate.swift in Sources */,
 				B944A78627118AA8000057BC /* Network Manager.swift in Sources */,
 			);
